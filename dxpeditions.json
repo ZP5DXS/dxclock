@@ -1,0 +1,98 @@
+{
+  "source": "https://www.ng3k.com/Misc/adxoc.html",
+  "updated_utc": "2026-10-26T21:00:00Z",
+  "snapshot_notice": "Listado inicial referencial; Github Actions realiza actualizaciones automáticas",
+  "entries": [
+    {
+      "call": "3B9",
+      "entity": "Rodrigues",
+      "start": "2026-10-20",
+      "end": "2026-11-28",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "3DA0GY",
+      "entity": "Esuatini",
+      "start": "2026-10-15",
+      "end": "2026-11-02",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "5H3MB",
+      "entity": "Tanzania",
+      "start": "2026-10-19",
+      "end": "2026-11-19",
+      "modes": "CW"
+    },
+    {
+      "call": "5W0ZP",
+      "entity": "Samoa",
+      "start": "2026-10-19",
+      "end": "2026-10-29",
+      "modes": "FT8 / FT4; CW posible"
+    },
+    {
+      "call": "7P8GE",
+      "entity": "Lesoto",
+      "start": "2026-10-16",
+      "end": "2026-10-29",
+      "modes": "No especificado"
+    },
+    {
+      "call": "7P9EA",
+      "entity": "Lesoto",
+      "start": "2026-10-26",
+      "end": "2026-11-25",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "9N7XT",
+      "entity": "Nepal",
+      "start": "2026-10-23",
+      "end": "2026-10-31",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "C5R",
+      "entity": "Gambia",
+      "start": "2026-10-01",
+      "end": "2026-11-04",
+      "modes": "SSB"
+    },
+    {
+      "call": "H44MS",
+      "entity": "Islas Salomón",
+      "start": "2026-10-03",
+      "end": "2026-11-20",
+      "modes": "FT8 / SSB"
+    },
+    {
+      "call": "JD1BQP",
+      "entity": "Ogasawara",
+      "start": "2026-10-17",
+      "end": "2026-11-02",
+      "modes": "No especificado"
+    },
+    {
+      "call": "6W/I2YSB",
+      "entity": "Senegal",
+      "start": "2026-10-28",
+      "end": "2026-11-09",
+      "modes": "CW / SSB / RTTY / FT8"
+    },
+    {
+      "call": "3X4U",
+      "entity": "Guinea",
+      "start": "2026-11-10",
+      "end": "2026-11-24",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "FW3GT",
+      "entity": "Wallis y Futuna",
+      "start": "2026-10-31",
+      "end": "2026-11-14",
+      "modes": "CW / FT8"
+    }
+  ]
+}
