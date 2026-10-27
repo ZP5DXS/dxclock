@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-27T12:24:15.965629+00:00",
+  "updated_utc": "2026-10-27T22:23:07.206178+00:00",
   "entries": [
     {
       "call": "3A",
@@ -113,6 +113,13 @@
       "start": "2026-10-16",
       "end": "2026-10-29",
       "modes": "No especificado"
+    },
+    {
+      "call": "8P9CB",
+      "entity": "Barbados",
+      "start": "2027-01-09",
+      "end": "2027-01-21",
+      "modes": "CW / SSB"
     },
     {
       "call": "9M8T",
@@ -281,6 +288,13 @@
       "start": "2027-03-09",
       "end": "2027-03-15",
       "modes": "SSB"
+    },
+    {
+      "call": "JD1",
+      "entity": "Ogasawara",
+      "start": "2026-10-25",
+      "end": "2026-11-04",
+      "modes": "FT8"
     },
     {
       "call": "JD1BQP",
@@ -456,6 +470,13 @@
       "start": "2027-01-10",
       "end": "2027-10-17",
       "modes": "SSB / FT8"
+    },
+    {
+      "call": "VP8TTX",
+      "entity": "Falkland Is",
+      "start": "2027-04-01",
+      "end": "2027-04-15",
+      "modes": "CW / SSB"
     },
     {
       "call": "XR0Z",
