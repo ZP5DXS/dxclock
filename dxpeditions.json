@@ -1,21 +1,62 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-26T21:00:00Z",
-  "snapshot_notice": "Listado inicial referencial; Github Actions realiza actualizaciones automáticas",
+  "updated_utc": "2026-10-27T12:24:15.965629+00:00",
   "entries": [
     {
+      "call": "3A",
+      "entity": "Monaco",
+      "start": "2027-03-02",
+      "end": "2027-03-09",
+      "modes": "CW / SSB / FT8 / FT4"
+    },
+    {
+      "call": "3B8",
+      "entity": "Mauritius",
+      "start": "2026-11-20",
+      "end": "2026-12-03",
+      "modes": "No especificado"
+    },
+    {
       "call": "3B9",
-      "entity": "Rodrigues",
+      "entity": "Rodrigues I",
       "start": "2026-10-20",
       "end": "2026-11-28",
       "modes": "CW / SSB"
     },
     {
+      "call": "3B9",
+      "entity": "Rodrigues I",
+      "start": "2026-11-22",
+      "end": "2026-12-02",
+      "modes": "CW / SSB"
+    },
+    {
       "call": "3DA0GY",
-      "entity": "Esuatini",
+      "entity": "eSwatini",
       "start": "2026-10-15",
       "end": "2026-11-02",
       "modes": "CW / SSB"
+    },
+    {
+      "call": "3X4U",
+      "entity": "Guinea",
+      "start": "2026-11-10",
+      "end": "2026-11-24",
+      "modes": "CW / SSB / FT8 / RTTY"
+    },
+    {
+      "call": "3Y0L",
+      "entity": "Peter I",
+      "start": "2027-02-01",
+      "end": "2027-02-28",
+      "modes": "No especificado"
+    },
+    {
+      "call": "5H1RK",
+      "entity": "Tanzania",
+      "start": "2026-12-23",
+      "end": "2027-01-06",
+      "modes": "CW / FT8 / FT4"
     },
     {
       "call": "5H3MB",
@@ -27,22 +68,57 @@
     {
       "call": "5W0ZP",
       "entity": "Samoa",
-      "start": "2026-10-19",
+      "start": "2026-10-21",
       "end": "2026-10-29",
-      "modes": "FT8 / FT4; CW posible"
+      "modes": "CW / FT8 / FT4"
+    },
+    {
+      "call": "5X7W",
+      "entity": "Uganda",
+      "start": "2026-11-08",
+      "end": "2026-12-29",
+      "modes": "CW / FT8"
+    },
+    {
+      "call": "5Z4GO/P",
+      "entity": "Kenya",
+      "start": "2026-10-28",
+      "end": "2026-10-30",
+      "modes": "CW"
+    },
+    {
+      "call": "6O6X",
+      "entity": "Somalia",
+      "start": "2027-02-15",
+      "end": "2027-02-27",
+      "modes": "No especificado"
+    },
+    {
+      "call": "6W",
+      "entity": "Senegal",
+      "start": "2026-10-28",
+      "end": "2026-11-09",
+      "modes": "CW / SSB / FT8 / RTTY"
+    },
+    {
+      "call": "7P8EA",
+      "entity": "Lesotho",
+      "start": "2026-10-26",
+      "end": "2026-11-25",
+      "modes": "CW / SSB"
     },
     {
       "call": "7P8GE",
-      "entity": "Lesoto",
+      "entity": "Lesotho",
       "start": "2026-10-16",
       "end": "2026-10-29",
       "modes": "No especificado"
     },
     {
-      "call": "7P9EA",
-      "entity": "Lesoto",
-      "start": "2026-10-26",
-      "end": "2026-11-25",
+      "call": "9M8T",
+      "entity": "East Malaysia",
+      "start": "2027-06-04",
+      "end": "2027-06-20",
       "modes": "CW / SSB"
     },
     {
@@ -53,6 +129,34 @@
       "modes": "CW / SSB / FT8"
     },
     {
+      "call": "9X5KM",
+      "entity": "Rwanda",
+      "start": "2026-10-31",
+      "end": "2026-11-11",
+      "modes": "No especificado"
+    },
+    {
+      "call": "A35TV",
+      "entity": "Tonga",
+      "start": "2026-11-28",
+      "end": "2026-12-04",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "C5A",
+      "entity": "Gambia",
+      "start": "2026-10-21",
+      "end": "2026-10-31",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "C5H",
+      "entity": "Gambia",
+      "start": "2026-12-27",
+      "end": "2027-01-03",
+      "modes": "SSB / FT8 / FT4"
+    },
+    {
       "call": "C5R",
       "entity": "Gambia",
       "start": "2026-10-01",
@@ -60,11 +164,123 @@
       "modes": "SSB"
     },
     {
+      "call": "C8K",
+      "entity": "Mozambique",
+      "start": "2026-11-09",
+      "end": "2026-11-20",
+      "modes": "CW / SSB / FT8 / FT4 / RTTY"
+    },
+    {
+      "call": "D44JB",
+      "entity": "Cape Verde Is",
+      "start": "2026-11-13",
+      "end": "2026-11-20",
+      "modes": "SSB / FT8"
+    },
+    {
+      "call": "D44PX",
+      "entity": "Cape Verde Is",
+      "start": "2026-11-04",
+      "end": "2026-11-11",
+      "modes": "SSB / FT8 / FT4"
+    },
+    {
+      "call": "E51A",
+      "entity": "South Cook Is",
+      "start": "2026-11-14",
+      "end": "2026-11-22",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "E51MWA",
+      "entity": "North Cook Is",
+      "start": "2026-10-21",
+      "end": "2026-11-16",
+      "modes": "CW"
+    },
+    {
+      "call": "EG9MM",
+      "entity": "Ceuta & Melilla",
+      "start": "2026-11-13",
+      "end": "2026-11-15",
+      "modes": "SSB"
+    },
+    {
+      "call": "FO",
+      "entity": "French Polynesia",
+      "start": "2027-05-17",
+      "end": "2027-05-24",
+      "modes": "CW / SSB / FT8 / FT4"
+    },
+    {
+      "call": "FS",
+      "entity": "St Martin",
+      "start": "2026-11-30",
+      "end": "2026-12-09",
+      "modes": "CW"
+    },
+    {
+      "call": "FW3GT",
+      "entity": "Wallis & Futuna",
+      "start": "2026-10-31",
+      "end": "2026-11-14",
+      "modes": "CW / FT8"
+    },
+    {
       "call": "H44MS",
-      "entity": "Islas Salomón",
+      "entity": "Solomon Is",
       "start": "2026-10-03",
       "end": "2026-11-20",
-      "modes": "FT8 / SSB"
+      "modes": "SSB / FT8"
+    },
+    {
+      "call": "H44MS",
+      "entity": "Solomon Is",
+      "start": "2027-02-05",
+      "end": "2027-05-07",
+      "modes": "SSB / FT8"
+    },
+    {
+      "call": "HD4W",
+      "entity": "Ecuador",
+      "start": "2026-11-15",
+      "end": "2026-11-22",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "HD4W",
+      "entity": "Ecuador",
+      "start": "2026-11-20",
+      "end": "2026-11-22",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "HR5",
+      "entity": "Honduras",
+      "start": "2026-11-23",
+      "end": "2026-11-30",
+      "modes": "No especificado"
+    },
+    {
+      "call": "HR9",
+      "entity": "Honduras",
+      "start": "2026-11-25",
+      "end": "2026-12-05",
+      "modes": "No especificado"
+    },
+    {
+      "call": "J3",
+      "entity": "Grenada",
+      "start": "2026-10-31",
+      "end": "2026-11-06",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "J6",
+      "entity": "St Lucia",
+      "start": "2027-03-09",
+      "end": "2027-03-15",
+      "modes": "SSB"
     },
     {
       "call": "JD1BQP",
@@ -74,25 +290,214 @@
       "modes": "No especificado"
     },
     {
-      "call": "6W/I2YSB",
-      "entity": "Senegal",
-      "start": "2026-10-28",
-      "end": "2026-11-09",
-      "modes": "CW / SSB / RTTY / FT8"
+      "call": "KH0",
+      "entity": "Marianas",
+      "start": "2026-12-29",
+      "end": "2027-01-03",
+      "modes": "CW / FT8"
     },
     {
-      "call": "3X4U",
-      "entity": "Guinea",
-      "start": "2026-11-10",
-      "end": "2026-11-24",
+      "call": "KH8A",
+      "entity": "American Samoa",
+      "start": "2026-10-30",
+      "end": "2026-11-12",
+      "modes": "CW / SSB / FT8 / RTTY"
+    },
+    {
+      "call": "PJ7",
+      "entity": "Sint Maarten",
+      "start": "2027-01-19",
+      "end": "2027-01-27",
+      "modes": "No especificado"
+    },
+    {
+      "call": "PJ7WW",
+      "entity": "Sint Maartin",
+      "start": "2026-11-23",
+      "end": "2026-11-30",
+      "modes": "CW"
+    },
+    {
+      "call": "PZ5KW",
+      "entity": "Surinam",
+      "start": "2026-11-23",
+      "end": "2026-12-01",
+      "modes": "SSB / FT8"
+    },
+    {
+      "call": "S79",
+      "entity": "Seychelles",
+      "start": "2026-12-28",
+      "end": "2027-01-08",
+      "modes": "No especificado"
+    },
+    {
+      "call": "S9R",
+      "entity": "Sao Tome & Principe I",
+      "start": "2026-10-17",
+      "end": "2026-10-31",
+      "modes": "CW / SSB / FT8 / RTTY"
+    },
+    {
+      "call": "T8",
+      "entity": "Palau",
+      "start": "2027-04-08",
+      "end": "2027-04-14",
+      "modes": "No especificado"
+    },
+    {
+      "call": "T88SM",
+      "entity": "Palau",
+      "start": "2027-01-08",
+      "end": "2027-01-14",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "T8KT",
+      "entity": "Palau",
+      "start": "2027-02-10",
+      "end": "2027-02-18",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "TZ4AM",
+      "entity": "Mali",
+      "start": "2026-10-22",
+      "end": "2026-12-02",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "V26JJ",
+      "entity": "Antigua",
+      "start": "2026-10-30",
+      "end": "2026-11-06",
       "modes": "CW / SSB / FT8"
     },
     {
-      "call": "FW3GT",
-      "entity": "Wallis y Futuna",
-      "start": "2026-10-31",
-      "end": "2026-11-14",
-      "modes": "CW / FT8"
+      "call": "V4",
+      "entity": "St Kitts & Nevis",
+      "start": "2027-02-03",
+      "end": "2027-03-03",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "V47JA",
+      "entity": "St Kitts & Nevis",
+      "start": "2026-10-28",
+      "end": "2026-11-06",
+      "modes": "SSB / FT8"
+    },
+    {
+      "call": "V6XG",
+      "entity": "Micronesia",
+      "start": "2027-01-14",
+      "end": "2027-01-22",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "VK2LHW",
+      "entity": "Lord Howe I",
+      "start": "2027-05-24",
+      "end": "2027-06-07",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "VK9DS",
+      "entity": "Christmas I",
+      "start": "2026-11-28",
+      "end": "2026-12-04",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "VK9DS",
+      "entity": "Cocos (Keeling) I",
+      "start": "2026-11-20",
+      "end": "2026-11-27",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "VK9XY",
+      "entity": "Christmas I",
+      "start": "2026-11-16",
+      "end": "2026-12-04",
+      "modes": "CW"
+    },
+    {
+      "call": "VP0SG",
+      "entity": "South Georgia I",
+      "start": "2027-03-12",
+      "end": "2027-03-26",
+      "modes": "CW / SSB"
+    },
+    {
+      "call": "VP2MCV",
+      "entity": "Montserrat",
+      "start": "2026-11-03",
+      "end": "2026-11-16",
+      "modes": "No especificado"
+    },
+    {
+      "call": "VP2V",
+      "entity": "Br Virgin Is",
+      "start": "2026-11-29",
+      "end": "2026-12-07",
+      "modes": "No especificado"
+    },
+    {
+      "call": "VP6W",
+      "entity": "Pitcairn I",
+      "start": "2027-05-27",
+      "end": "2027-06-12",
+      "modes": "CW / SSB / FT8 / FT4"
+    },
+    {
+      "call": "VP8TOG",
+      "entity": "Falkland Is",
+      "start": "2027-01-10",
+      "end": "2027-10-17",
+      "modes": "SSB / FT8"
+    },
+    {
+      "call": "XR0Z",
+      "entity": "Juan Fernandez Is",
+      "start": "2026-11-01",
+      "end": "2026-11-30",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "XT2MAX",
+      "entity": "Burkina Faso",
+      "start": "2027-01-17",
+      "end": "2027-01-24",
+      "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "XU7X",
+      "entity": "Cambodia",
+      "start": "2027-11-13",
+      "end": "2027-11-23",
+      "modes": "CW / SSB / FT8 / FT4 / RTTY"
+    },
+    {
+      "call": "YJ0CA",
+      "entity": "Vanuatu",
+      "start": "2026-10-18",
+      "end": "2026-10-30",
+      "modes": "SSB"
+    },
+    {
+      "call": "YJ0SP",
+      "entity": "Vanuatu",
+      "start": "2026-10-30",
+      "end": "2026-11-05",
+      "modes": "No especificado"
+    },
+    {
+      "call": "ZD7LC",
+      "entity": "St Helena",
+      "start": "2026-12-14",
+      "end": "2027-01-01",
+      "modes": "CW / SSB"
     }
   ]
 }
