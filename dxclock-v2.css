@@ -1,0 +1,262 @@
+
+/* DX CLOCK V2 — VISUAL REFINEMENT */
+
+/* Contenedores y tarjetas */
+.center-bottom,
+.solar-wrap,
+.solar-values,
+.bands,
+.spotmain,
+.dxline {
+  min-width: 0;
+}
+
+.spotmain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 7px;
+}
+
+.spotmain .rarity {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Sol: ampliar sin deformar la imagen */
+.sun-observation {
+  width: clamp(160px, 18vw, 260px) !important;
+  height: clamp(160px, 18vw, 260px) !important;
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+
+.sun-observation img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Indicadores solares */
+.solar-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  width: 100%;
+}
+
+.solar-value {
+  min-width: 0;
+  border-radius: 8px;
+}
+
+.solar-value b {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bandas */
+.bands {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.band {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+.band b {
+  font-variant-numeric: tabular-nums;
+}
+
+.band-meter {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Países DXCC */
+.dxcall-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.dx-country-name {
+  display: block;
+  font-size: 10px;
+  line-height: 1.25;
+  opacity: .7;
+  overflow-wrap: anywhere;
+}
+
+/* Pantallas grandes */
+@media (min-width: 1400px) and (min-height: 800px) {
+  .sun-observation {
+    width: clamp(180px, 20vh, 270px) !important;
+    height: clamp(180px, 20vh, 270px) !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 681px) and (max-width: 1100px) {
+  .sun-observation {
+    width: clamp(150px, 20vw, 230px) !important;
+    height: clamp(150px, 20vw, 230px) !important;
+  }
+}
+
+/* Móvil */
+@media (max-width: 680px) {
+  .center-bottom {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .sun-observation {
+    width: min(55vw, 235px) !important;
+    height: min(55vw, 235px) !important;
+  }
+
+  .solar-values {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .bands {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .band {
+    min-height: 75px;
+  }
+
+  .spotmain {
+    gap: 4px 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .band {
+    transition: none;
+  }
+}
+
+
+/* DX CLOCK V2 — SOLAR COMPOSITION */
+
+/* Escritorio: Sol central con indicadores en las esquinas */
+@media (min-width: 1101px) {
+
+  .solar-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0,1fr);
+    grid-template-rows: minmax(210px,1fr);
+    align-items: center;
+    justify-items: center;
+    min-height: 235px;
+    isolation: isolate;
+  }
+
+  .sun-observation {
+    grid-area: 1 / 1;
+    width: clamp(165px, 17vw, 255px) !important;
+    height: clamp(165px, 17vw, 255px) !important;
+    margin: auto !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  .solar-values {
+    grid-area: 1 / 1;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    align-items: start;
+    pointer-events: none;
+  }
+
+  .solar-values > * {
+    pointer-events: auto;
+    min-width: 0;
+    max-width: 95px;
+    padding: 5px 7px;
+    background: rgba(8,18,30,.72);
+    border: 1px solid rgba(130,170,200,.15);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+  }
+
+  .solar-values > :nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: start;
+  }
+
+  .solar-values > :nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+  }
+
+  .solar-values > :nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    align-self: end;
+  }
+
+  .solar-values > :nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: end;
+  }
+
+  .solar-values > :nth-child(n+5) {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: stretch;
+    align-self: stretch;
+    max-width: none;
+  }
+}
+
+/* Tablet y móvil: indicadores debajo para evitar superposiciones */
+@media (max-width: 1100px) {
+
+  .solar-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .solar-values {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 7px;
+    margin-top: 8px;
+  }
+
+  .solar-values > * {
+    min-width: 0;
+    max-width: none;
+  }
+}
