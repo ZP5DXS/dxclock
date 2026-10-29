@@ -1009,3 +1009,60 @@
   width:14px;
   height:14px;
 }
+
+/* DX CLOCK — BAND CONDITIONS HORIZONTAL */
+
+.band .daynight {
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  flex-wrap:nowrap !important;
+  gap:4px !important;
+  width:100% !important;
+  margin-top:5px !important;
+  padding:0 3px !important;
+}
+
+.band .daynight > span {
+  display:inline-block !important;
+  width:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  font-size:9px !important;
+  line-height:1.2 !important;
+}
+
+.band .heat-label {
+  display:none !important;
+}
+
+
+/* DX CLOCK — BAND CONDITIONS HORIZONTAL */
+
+.band .daynight {
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  flex-wrap:nowrap !important;
+  gap:4px !important;
+  width:100% !important;
+  margin-top:5px !important;
+  padding:0 3px !important;
+}
+
+.band .daynight > span {
+  display:inline-block !important;
+  width:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  white-space:nowrap !important;
+  font-size:9px !important;
+  line-height:1.2 !important;
+}
+
+.band .heat-label {
+  display:none !important;
+}
