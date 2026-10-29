@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-29T05:57:50.242503+00:00",
+  "updated_utc": "2026-10-29T13:16:49.052821+00:00",
   "entries": [
     {
       "call": "3A",
@@ -519,6 +519,13 @@
       "start": "2026-10-30",
       "end": "2026-11-05",
       "modes": "No especificado"
+    },
+    {
+      "call": "ZD7",
+      "entity": "St Helena",
+      "start": "2026-11-22",
+      "end": "2026-12-05",
+      "modes": "CW / SSB / FT8"
     },
     {
       "call": "ZD7LC",
