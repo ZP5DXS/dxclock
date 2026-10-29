@@ -819,7 +819,7 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
   function highlight(){
     const containers = [
       document.getElementById('spotList'),
-      document.getElementById('expList')
+      document.getElementById('dxList')
     ].filter(Boolean);
 
     for(const container of containers){
@@ -843,7 +843,7 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
 
   const observer=new MutationObserver(highlight);
 
-  for(const id of ['spotList','expList']){
+  for(const id of ['spotList','dxList']){
     const element=document.getElementById(id);
 
     if(element){
