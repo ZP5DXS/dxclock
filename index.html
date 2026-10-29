@@ -395,7 +395,17 @@ function drawMap(){
  layer.replaceChildren();const bins=new Map();
  const mapSpots=spots.filter(s=>(mode==='ALL'||s.mode===mode)&&(band==='ALL'||bandOf(freq(s))===band));
  let located=0,approx=0;
- for(const s of mapSpots){let pos=mapPos(s);if(!pos){pos=approxSpotPos(s);if(pos)approx++}if(!pos)continue;
+ for(const s of mapSpots){
+ let pos;
+ try {
+   pos=mapPos(s);
+   if(!pos){pos=approxSpotPos(s);if(pos)approx++}
+ } catch(e) {
+   console.error('DX MAP SPOT ERROR',s,e);
+   $('mapInfo').textContent='ERROR MAPA: '+e.message+' · '+mapSpots.length+' spots recibidos';
+   return;
+ }
+ if(!pos)continue;
  located++;const key=Math.round(pos[0]/2)+'/'+Math.round(pos[1]/2)+'/'+s.mode+'/'+(bandOf(freq(s))||'?');
  let b=bins.get(key);if(!b)bins.set(key,b={pos,count:0,s});b.count++}
  for(const b of bins.values())layer.append(markerSvg(b.s,b.pos[0],b.pos[1],b.count));
