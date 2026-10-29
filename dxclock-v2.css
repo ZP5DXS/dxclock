@@ -260,3 +260,86 @@
     max-width: none;
   }
 }
+
+/* DX CLOCK V2 — SOLAR PANEL FINAL */
+@media (min-width: 900px) {
+
+  .solar-wrap {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: minmax(220px, 1fr) !important;
+    align-items: center !important;
+    justify-items: center !important;
+    min-height: 250px !important;
+    overflow: hidden !important;
+    isolation: isolate;
+  }
+
+  .solar-wrap .sun-observation {
+    grid-area: 1 / 1 !important;
+    position: relative !important;
+    width: min(100%, 245px) !important;
+    height: auto !important;
+    aspect-ratio: 1 !important;
+    margin: auto !important;
+    z-index: 1;
+  }
+
+  .solar-wrap .sun-observation img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .solar-wrap .solar-values {
+    grid-area: 1 / 1 !important;
+    position: relative !important;
+    z-index: 2;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+    pointer-events: none;
+  }
+
+  .solar-wrap .solar-values > * {
+    width: max-content !important;
+    min-width: 65px !important;
+    max-width: 105px !important;
+    padding: 6px 8px !important;
+    background: rgba(5, 15, 23, .82) !important;
+    border: 1px solid rgba(83, 211, 199, .25) !important;
+    border-radius: 6px !important;
+    pointer-events: auto;
+  }
+
+  .solar-wrap .solar-values > :nth-child(1) {
+    grid-area: 1 / 1 !important;
+    justify-self: start !important;
+    align-self: start !important;
+  }
+
+  .solar-wrap .solar-values > :nth-child(2) {
+    grid-area: 1 / 2 !important;
+    justify-self: end !important;
+    align-self: start !important;
+  }
+
+  .solar-wrap .solar-values > :nth-child(3) {
+    grid-area: 2 / 1 !important;
+    justify-self: start !important;
+    align-self: end !important;
+  }
+
+  .solar-wrap .solar-values > :nth-child(4) {
+    grid-area: 2 / 2 !important;
+    justify-self: end !important;
+    align-self: end !important;
+  }
+}
