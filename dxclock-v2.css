@@ -975,3 +975,37 @@
   font-weight:650 !important;
   opacity:1 !important;
 }
+
+
+/* DX CLOCK — HOT ICON & SOLAR TITLE FIX */
+
+/* Eliminar definitivamente el sol del encabezado */
+.solarPanel .section h2::before {
+  content:none !important;
+  display:none !important;
+}
+
+/* La llama no participa del flujo de la tarjeta */
+.band {
+  position:relative !important;
+}
+
+.band .dx-band-flame {
+  position:absolute !important;
+  top:5px !important;
+  left:7px !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:15px !important;
+  height:15px !important;
+  color:#ff9c38 !important;
+  pointer-events:none !important;
+  filter:drop-shadow(0 0 3px rgba(255,140,35,.4));
+}
+
+.band .dx-band-flame svg {
+  display:block;
+  width:14px;
+  height:14px;
+}
