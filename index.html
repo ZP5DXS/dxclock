@@ -170,11 +170,28 @@ const countryCodes={'paraguay':'py','argentina':'ar','brazil':'br','brasil':'br'
 function countryCode(s){const txt=String(s.country||s.entity||'').trim().toLowerCase();if(countryCodes[txt])return countryCodes[txt];const c=norm(s.callsign||s.call);if(/^3DA/.test(c))return 'sz';if(/^3B8|^3B9/.test(c))return 'mu';if(/^5H/.test(c))return 'tz';if(/^5W/.test(c))return 'ws';if(/^7P/.test(c))return 'ls';if(/^9N/.test(c))return 'np';if(/^C5/.test(c))return 'gm';if(/^H4/.test(c))return 'sb';if(/^S9/.test(c))return 'st';if(/^6W/.test(c))return 'sn';if(/^E5/.test(c))return 'ck';if(/^V2/.test(c))return 'ag';if(/^ZP\d/.test(c))return 'py';if(/^CX\d/.test(c))return 'uy';if(/^CE\d/.test(c))return 'cl';if(/^OA\d/.test(c))return 'pe';if(/^YV\d/.test(c))return 've';if(/^XE\d/.test(c))return 'mx';if(/^VE\d|^VA\d/.test(c))return 'ca';if(/^G[0-9]|^M[0-9]|^2E[0-9]/.test(c))return 'gb';if(/^PA\d|^PD\d/.test(c))return 'nl';if(/^ON\d/.test(c))return 'be';if(/^HB9/.test(c))return 'ch';if(/^OE\d/.test(c))return 'at';if(/^SM\d/.test(c))return 'se';if(/^OH\d/.test(c))return 'fi';if(/^LA\d/.test(c))return 'no';if(/^SP\d|^SQ\d/.test(c))return 'pl';if(/^LU\d|^LW\d/.test(c))return 'ar';if(/^CX\d/.test(c))return 'uy';if(/^PY\d|^PP\d|^PT\d/.test(c))return 'br';if(/^JA\d|^JE\d|^JF\d/.test(c))return 'jp';if(/^DL\d/.test(c))return 'de';if(/^F\d/.test(c))return 'fr';if(/^EA\d/.test(c))return 'es';if(/^I\d/.test(c))return 'it';if(/^VK\d/.test(c))return 'au';if(/^[KWN]\d/.test(c))return 'us';if(/^GM\d|^MM\d/.test(c))return 'gb';if(/^GW\d|^MW\d/.test(c))return 'gb';if(/^GI\d|^MI\d/.test(c))return 'gb';if(/^EI\d/.test(c))return 'ie';if(/^NT\d|^KA\d|^KB\d|^KC\d|^KD\d|^KE\d|^KF\d|^KG\d|^KI\d|^KJ\d|^KK\d|^KM\d|^KN\d|^KO\d|^KP\d|^KQ\d|^KR\d|^KS\d|^KT\d|^KU\d|^KV\d|^KW\d|^KX\d|^KY\d|^KZ\d/.test(c))return 'us';if(/^VP2M/.test(c))return 'ms';if(/^VP2E/.test(c))return 'ai';if(/^VP2V/.test(c))return 'vg';if(/^KH2/.test(c))return 'gu';if(/^KH6/.test(c))return 'us';if(/^KH8/.test(c))return 'as';if(/^KP2/.test(c))return 'vi';if(/^KP4/.test(c))return 'pr';if(/^CT\d/.test(c))return 'pt';if(/^OK\d/.test(c))return 'cz';if(/^OM\d/.test(c))return 'sk';if(/^S5\d/.test(c))return 'si';if(/^9A\d/.test(c))return 'hr';if(/^YU\d/.test(c))return 'rs';if(/^LZ\d/.test(c))return 'bg';if(/^SV\d/.test(c))return 'gr';if(/^TA\d/.test(c))return 'tr';return null}
 const prefixFlags=[[/^JD1/,'jp'],[/^TZ/,'ml'],[/^PJ7/,'sx'],[/^PJ5|^PJ6/,'bq'],[/^PJ2/,'cw'],[/^PZ/,'sr'],[/^HR/,'hn'],[/^HD|^HC/,'ec'],[/^VK9X/,'cx'],[/^VK9C/,'cc'],[/^3B9/,'mu'],[/^3B8/,'mu'],[/^6Y/,'jm'],[/^9Y/,'tt'],[/^V3/,'bz'],[/^TI/,'cr'],[/^HP/,'pa'],[/^YN/,'ni'],[/^TG/,'gt'],[/^YS/,'sv'],[/^HI/,'do'],[/^HH/,'ht'],[/^CO|^CM/,'cu'],[/^J7/,'dm'],[/^J8/,'vc'],[/^V4/,'kn'],[/^VP8/,'fk'],[/^ZB/,'gi'],[/^A[4]/,'om'],[/^A[6]/,'ae'],[/^A[7]/,'qa'],[/^A[9]/,'bh'],[/^9K/,'kw'],[/^HZ|^7Z/,'sa'],[/^4X|^4Z/,'il'],[/^5B/,'cy'],[/^4L/,'ge'],[/^EK/,'am'],[/^4J|^4K/,'az'],[/^EY/,'tj'],[/^EX/,'kg'],[/^UN|^UP|^UQ/,'kz'],[/^UK/,'uz'],[/^AP/,'pk'],[/^VU/,'in'],[/^HS/,'th'],[/^9M/,'my'],[/^YB|^YC|^YD|^YE|^YF/,'id'],[/^DU|^DX|^DZ/,'ph'],[/^HL|^DS/,'kr'],[/^BV/,'tw'],[/^VR/,'hk'],[/^XX9/,'mo'],[/^XV|^3W/,'vn'],[/^XU/,'kh'],[/^XW/,'la'],[/^X[YZ]/,'mm'],[/^9V/,'sg'],[/^5Z/,'ke'],[/^5N/,'ng'],[/^9G/,'gh'],[/^9J/,'zm'],[/^9Q/,'cd'],[/^5R/,'mg'],[/^D2/,'ao'],[/^CN/,'ma'],[/^7X/,'dz'],[/^3V/,'tn'],[/^5A/,'ly'],[/^ST/,'sd'],[/^SU/,'eg'],[/^ET/,'et'],[/^5U/,'ne'],[/^5T/,'mr'],[/^J5/,'gw'],[/^J2/,'dj'],[/^D4/,'cv'],[/^D6/,'km'],[/^TR/,'ga'],[/^TJ/,'cm'],[/^TL/,'cf'],[/^TT/,'td'],[/^TY/,'bj'],[/^TU/,'ci'],[/^XT/,'bf'],[/^Z2/,'zw'],[/^ZS/,'za'],[/^V5/,'na'],[/^A2/,'bw'],[/^3DA/,'sz'],[/^C9/,'mz'],[/^S7/,'sc'],[/^9U/,'bi'],[/^9X/,'rw'],[/^5X/,'ug'],[/^T5/,'so'],[/^5H/,'tz'],[/^7P/,'ls'],[/^C5/,'gm'],[/^S9/,'st'],[/^6W/,'sn'],[/^E5/,'ck'],[/^XX9/,'mo'],[/^TQ0/,'fr'],[/^C91/,'mz'],[/^OD5/,'lb'],[/^TC\d/,'tr'],[/^3W\d/,'vn'],[/^S5\d/,'si'],[/^OK\d/,'cz'],[/^OM\d/,'sk'],[/^UA\d|^RA\d|^RZ\d/,'ru'],[/^JA\d|^JE\d|^JF\d|^JG\d|^JH\d|^JI\d|^JJ\d|^JK\d|^JL\d|^JM\d|^JN\d|^JO\d|^JP\d|^JQ\d|^JR\d|^JS\d/,'jp'],[/^(?:LU|LW)\d/,'ar'],[/^(?:PY|PP|PQ|PR|PS|PT|PU|PV|PW|PX)\d/,'br'],[/^(?:EA|EB|EC|ED|EE|EF|EG)\d/,'es'],[/^(?:F|TM)\d/,'fr'],[/^(?:DL|DA|DB|DC|DD|DE|DF|DG|DH|DJ|DK|DM|DN|DO|DP|DQ|DR)\d/,'de'],[/^(?:I|IK|IZ|IU)\d/,'it'],[/^JA?\d|^J[HIKLMSN]\d/,'jp'],[/^VK\d/,'au'],[/^ZL\d/,'nz'],[/^VE\d|^VA\d|^VO\d|^VY\d/,'ca'],[/^K\d|^N\d|^W\d|^AA\d|^AB\d|^AC\d|^AD\d/,'us'],[/^G\d|^M\d|^2E\d/,'gb'],[/^PA\d|^PD\d|^PE\d|^PH\d|^PI\d/,'nl'],[/^ON\d|^OO\d|^OP\d|^OQ\d|^OR\d|^OS\d|^OT\d/,'be'],[/^SM\d|^SA\d/,'se'],[/^OH\d/,'fi'],[/^LA\d|^LB\d/,'no'],[/^SP\d|^SQ\d/,'pl'],[/^HB\d/,'ch'],[/^ZS\d/,'za'],[/^VU\d/,'in']];
 function countryForSpot(s){
- const c=countryCode(s);if(c)return c;
  const call=norm(s.callsign||s.call);
  const match=entries.find(e=>norm(e.call)===call);
- if(match)return countryCode({callsign:call,entity:match.entity});
- return prefixFlags.find(([re])=>re.test(call))?.[1]||null;
+ const entity=s.entity||s.country||match?.entity||'';
+ const explicit=countryCodes[String(entity).trim().toLowerCase()];
+ if(explicit)return explicit;
+ // Indicativos portables: priorizar ubicación operativa.
+ const parts=call.split('/').filter(Boolean);
+ const portable=parts.length>1
+   ?parts.find((part,i)=>
+       (i===0||i===parts.length-1)&&
+       /^(?:6W|HR\d?|EA8|KH\d?|KP\d?|PJ\d?|VK\d?|VP8|FO|FS|FG|FM|FY|J6|J7|J8|S9|XX9)/.test(part)
+     )
+   :null;
+ if(portable){
+   const pc=prefixFlags.find(([re])=>re.test(portable))?.[1]
+       ||countryCode({callsign:portable});
+   if(pc)return pc;
+ }
+ if(/^VK0/.test(call))return 'aq';
+ const prefix=prefixFlags.find(([re])=>re.test(call))?.[1];
+ if(prefix)return prefix;
+ return countryCode({callsign:call,entity});
 }
 function flag(s){const cc=countryForSpot(s);if(!cc){let g=document.createElement('span');g.textContent='—';g.className='flag-placeholder';g.title='País no verificado';return g}let im=document.createElement('img');im.className='flag';im.width=23;im.height=16;im.alt='Bandera '+cc.toUpperCase();im.loading='lazy';im.decoding='async';im.src='https://flagcdn.com/'+cc+'.svg';im.onerror=()=>{let g=document.createElement('span');g.textContent='—';g.className='flag-placeholder';g.title='SVG no disponible';im.replaceWith(g)};return im}
 
