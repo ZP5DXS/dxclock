@@ -390,6 +390,7 @@ function markerSvg(s,x,y,n){const ns='http://www.w3.org/2000/svg',g=document.cre
 function solarPosition(d=new Date()){const rad=Math.PI/180,day=(d-Date.UTC(d.getUTCFullYear(),0,0))/86400000,h=d.getUTCHours()+d.getUTCMinutes()/60+d.getUTCSeconds()/3600,dec=23.44*Math.sin(rad*(360/365*(day-81))),lon=180-15*h;return{dec,lon:((lon+540)%360)-180}}
 function drawSky(){const ns='http://www.w3.org/2000/svg',grid=$('geoGrid'),cel=$('celestialLayer');if(!grid||!cel)return;if(!grid.childNodes.length){for(let lon=-150;lon<=150;lon+=30){let l=document.createElementNS(ns,'line');l.setAttribute('x1',(lon+180)*2.5);l.setAttribute('x2',(lon+180)*2.5);l.setAttribute('y1',0);l.setAttribute('y2',450);l.setAttribute('class','geo-grid');grid.append(l)}for(let lat=-60;lat<=60;lat+=30){let l=document.createElementNS(ns,'line');l.setAttribute('x1',0);l.setAttribute('x2',900);l.setAttribute('y1',(90-lat)*2.5);l.setAttribute('y2',(90-lat)*2.5);l.setAttribute('class','geo-grid');grid.append(l)}}let p=solarPosition(),rad=Math.PI/180,pts=[];for(let lon=-180;lon<=180;lon+=2){let dl=(lon-p.lon)*rad,lat=Math.atan2(-Math.cos(dl),Math.tan(p.dec*rad))/rad;pts.push([(lon+180)*2.5,(90-lat)*2.5])}let northNight=p.dec<0,edge=northNight?0:450,path=`M ${pts[0][0]} ${edge} L `+pts.map(q=>q.join(' ')).join(' L ')+` L ${pts.at(-1)[0]} ${edge} Z`;$('nightLayer').setAttribute('d',path);$('twilightLayer').setAttribute('d','M '+pts.map(q=>q.join(' ')).join(' L '));cel.replaceChildren();let sun=document.createElementNS(ns,'text');sun.setAttribute('x',(p.lon+180)*2.5);sun.setAttribute('y',(90-p.dec)*2.5);sun.setAttribute('class','celestial');sun.textContent='☀';cel.append(sun);}
 function drawMap(){
+try{
  const layer=$('worldDots');if(!layer)return;
  try{drawSky()}catch(e){console.warn('Sky overlay',e)}
  layer.replaceChildren();const bins=new Map();
@@ -412,6 +413,12 @@ function drawMap(){
  try{drawDXMarkers()}catch(e){console.warn('DX map labels',e)}
  const info=$('mapInfo');info.replaceChildren(textEl('span',`${bins.size} zonas · ${located}/${mapSpots.length} spots${approx?' · '+approx+' aprox.':''} · `));
  const legend=textEl('span','● FT8  ▲ CW  ■ SSB');legend.style.fontWeight='650';info.append(legend);
+}catch(e){
+ console.error('DX MAP ERROR VISIBLE',e);
+ const info=document.getElementById('mapInfo');
+ if(info)info.textContent='ERROR MAPA: '+e.message+
+   ' · '+spots.length+' spots cargados';
+}
 }
 // Fallback by DXCC country, only when the source supplies no precise location.
 const mapCountryCenters={us:[39,-98],ca:[56,-106],br:[-11,-52],ar:[-35,-64],py:[-23,-58],uy:[-33,-56],cl:[-33,-71],pe:[-10,-76],co:[4,-74],ve:[7,-66],mx:[23,-102],gb:[54,-3],es:[40,-4],pt:[39,-8],fr:[47,2],de:[51,10],it:[42,12],ch:[47,8],at:[48,14],nl:[52,5],be:[51,4],pl:[52,19],cz:[50,15],sk:[49,19],hu:[47,19],ro:[46,25],gr:[39,23],tr:[39,35],ru:[58,70],ua:[49,32],se:[62,15],no:[62,10],fi:[64,26],dk:[56,10],ie:[53,-8],is:[65,-19],za:[-29,24],sn:[14,-14],gm:[13,-16],mz:[-18,35],ml:[17,-4],st:[0,7],ss:[7,30],cn:[35,103],jp:[36,138],kr:[36,128],in:[22,79],id:[-3,118],au:[-25,134],nz:[-41,173],ki:[2,-157],aq:[-75,0],al:[41,20],sj:[78,16],gl:[72,-42],fo:[62,-7],cv:[16,-24],tw:[24,121],hk:[22,114],th:[15,101],vn:[16,107],ph:[13,122],my:[4,102],sg:[1,104],ae:[24,54],il:[31,35],eg:[27,30],ma:[32,-7],dz:[28,3],tn:[34,9],ng:[9,8],gh:[8,-2],ke:[0,38],tz:[-6,35],ug:[1,32],zm:[-13,28],zw:[-19,30],bw:[-22,24],na:[-22,17],mg:[-19,47],mu:[-20,57],sc:[-5,55],re:[-21,55],lk:[7,81],np:[28,84],pk:[30,70],bd:[24,90],hr:[45,16],rs:[44,21],ba:[44,18],si:[46,15],bg:[43,25],lt:[55,24],lv:[57,25],ee:[59,25],by:[54,28],kz:[48,68],uz:[41,64],ge:[42,44],am:[40,45],az:[40,47],cy:[35,33],mt:[36,14],ag:[17,-62],bb:[13,-59],bs:[25,-77],bm:[32,-65],cu:[22,-79],do:[19,-70],ht:[19,-73],jm:[18,-77],tt:[11,-61],cr:[10,-84],pa:[9,-80],hn:[15,-86],gt:[15,-90],sv:[14,-89],ni:[13,-85],ec:[-2,-78],bo:[-17,-65],fk:[-52,-59],gy:[5,-59],sr:[4,-56],gf:[4,-53],cw:[12,-69],aw:[13,-70],bq:[12,-68],sx:[18,-63],gp:[16,-61],mq:[15,-61],pf:[-17,-149],fj:[-17,178],ws:[-14,-172],to:[-21,-175],vu:[-16,167],sb:[-9,160],pg:[-6,147],nc:[-21,165],ck:[-21,-159],as:[-14,-170],gu:[13,145]};
