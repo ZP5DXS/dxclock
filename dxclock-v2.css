@@ -293,3 +293,16 @@
 .solarPanel .solar-condition{display:none!important}
 .dx-layer-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:10px;color:var(--dim);margin:5px 0}.dx-layer-controls label{white-space:nowrap;cursor:pointer}.dx-layer-controls input{accent-color:#46d4c8}
 .spotmeta.multi-mode{display:flex;flex-wrap:wrap;gap:4px 9px;align-items:center}.mode-item{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;font-size:10px}
+
+/* DX Clock — compact data-first solar panel, no decorative sun */
+.solarPanel .solar-wrap.solar-compact{display:block!important;position:relative!important;min-height:0!important;height:calc(100% - 26px)!important;overflow:hidden!important;padding:3px!important}
+.solarPanel .solar-compact .solar-values{position:static!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:minmax(54px,1fr) minmax(48px,.85fr) auto!important;gap:7px!important;width:100%!important;height:100%!important;margin:0!important;align-items:stretch!important}
+.solarPanel .solar-compact .solar-value{position:static!important;grid-area:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;min-width:0!important;max-width:none!important;width:100%!important;padding:6px 3px!important;border:1px solid var(--line)!important;background:var(--soft)!important;border-radius:7px!important}
+.solarPanel .solar-compact .solar-value b{font-size:clamp(19px,2vw,27px)!important;line-height:1.12!important;font-variant-numeric:tabular-nums}
+.solarPanel .solar-compact .solar-value span{font-size:10px!important;letter-spacing:.1em!important}
+.solarPanel .solar-compact .solar-hf{grid-column:1/-1!important;grid-row:1!important;display:flex!important;flex-direction:column!important;gap:3px!important;background:linear-gradient(90deg,rgba(23,54,63,.35),rgba(13,25,35,.7))!important}
+.solarPanel .solar-compact .solar-hf b{font-size:clamp(26px,2.5vw,36px)!important;font-weight:800!important;letter-spacing:.08em!important}
+.solarPanel .solar-compact .solar-condition{grid-column:1/-1!important;grid-row:3!important;display:block!important;text-align:center!important;font-size:10px!important;line-height:1.3!important;color:var(--dim)!important;overflow:hidden!important;white-space:nowrap!important;text-overflow:ellipsis!important;padding:1px!important}
+.solarPanel .solar-compact .solar-value:nth-child(1){grid-column:1!important;grid-row:2!important}
+.solarPanel .solar-compact .solar-value:nth-child(2){grid-column:2!important;grid-row:2!important}
+.solarPanel .solar-compact .solar-value:nth-child(3){grid-column:3!important;grid-row:2!important}
