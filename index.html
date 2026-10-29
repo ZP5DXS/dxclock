@@ -570,4 +570,28 @@ window.addEventListener('DOMContentLoaded',()=>{
  for(const [label,key,globalName] of [['Actividad ● ▲ ■','dxclock-activity','dxActivityEnabled'],['Colores por banda','dxclock-bandcolors','dxBandColorsEnabled']]){
  const el=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.checked=localStorage.getItem(key)!=='off';input.addEventListener('change',()=>{localStorage.setItem(key,input.checked?'on':'off');if(globalName==='dxActivityEnabled')dxActivityEnabled=input.checked;else dxBandColorsEnabled=input.checked;drawMap()});el.append(input,document.createTextNode(' '+label));box.append(el)}target.append(box);
 });
+</script><script>
+// DXCLOCK_BIND_dxActivityEnabled
+document.querySelectorAll('input').forEach(input => {
+  if (input.id.toLowerCase().includes('activity')) {
+    input.checked = dxActivityEnabled;
+    input.addEventListener('change', () => {
+      dxActivityEnabled = input.checked;
+      localStorage.setItem('dxclock-activity', input.checked ? 'on' : 'off');
+      drawMap();
+    });
+  }
+});
+</script><script>
+// DXCLOCK_BIND_dxBandColorsEnabled
+document.querySelectorAll('input').forEach(input => {
+  if (input.id.toLowerCase().includes('bandcolor')) {
+    input.checked = dxBandColorsEnabled;
+    input.addEventListener('change', () => {
+      dxBandColorsEnabled = input.checked;
+      localStorage.setItem('dxclock-bandcolors', input.checked ? 'on' : 'off');
+      drawMap();
+    });
+  }
+});
 </script></body></html>
