@@ -658,3 +658,59 @@
 #settings .dx-layer-row span {
  font-size:12px !important;
 }
+
+
+/* DX CLOCK V2 — NOAA TICKER FINAL */
+
+.solarPanel #solarAlerts.dx-noaa-ticker {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 29px !important;
+  min-height: 29px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  border-top: 1px solid rgba(77,211,197,.2) !important;
+}
+
+.solarPanel .dx-noaa-track {
+  position: absolute !important;
+  inset: 0 auto auto 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 29px !important;
+  width: max-content !important;
+  white-space: nowrap !important;
+  animation: dxNoaaScroll var(--dx-noaa-duration,60s)
+    linear infinite !important;
+}
+
+.solarPanel .dx-noaa-message {
+  display: inline-block !important;
+  padding-left: 100vw !important;
+  padding-right: 40px !important;
+  font-size: 11px !important;
+  line-height: 29px !important;
+  color: var(--dim) !important;
+  white-space: nowrap !important;
+}
+
+.solarPanel .dx-noaa-ticker:hover .dx-noaa-track {
+  animation-play-state: paused !important;
+}
+
+@keyframes dxNoaaScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solarPanel .dx-noaa-track {
+    animation: none !important;
+  }
+
+  .solarPanel .dx-noaa-message {
+    padding-left: 8px !important;
+  }
+}

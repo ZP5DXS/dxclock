@@ -662,68 +662,129 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
 })();</script>
 
 
+
 <script>
 /* DX CLOCK V2 — NOAA SPACE WEATHER ALERTS */
 (function(){
-  const url =
-    'https://services.swpc.noaa.gov/products/alerts.json';
-
   const panel = document.getElementById('solarAlerts');
-  if(!panel) return;
+  if (!panel) return;
 
-  async function updateAlerts(){
+  const track = document.createElement('div');
+  track.className = 'dx-noaa-track';
+  panel.classList.add('dx-noaa-ticker');
+  panel.replaceChildren(track);
+
+  const url = 'https://services.swpc.noaa.gov/products/alerts.json';
+
+  function summarize(item) {
+    const raw = String(item.message || '');
+    const normalized = raw.replace(/\s+/g, ' ');
+
+    const code = normalized.match(/\b(?:G[1-5]|R[1-5]|S[1-5])\b/i);
+    const level = code ? code[0].toUpperCase() : '';
+
+    let type = 'Aviso de actividad solar';
+
+    if (/geomagnetic/i.test(raw)) {
+      type = 'Tormenta geomagnética';
+    } else if (/radio blackout/i.test(raw)) {
+      type = 'Posible interrupción de radio HF';
+    } else if (/solar radiation/i.test(raw)) {
+      type = 'Tormenta de radiación solar';
+    } else if (/solar flare/i.test(raw)) {
+      type = 'Erupción solar';
+    }
+
+    const issued = Date.parse(
+      item.issue_datetime || item.issue_time || item.time_tag || ''
+    );
+
+    const date = Number.isFinite(issued)
+      ? new Date(issued).toLocaleString('es-ES', {
+          timeZone: 'UTC',
+          day: '2-digit',
+          month: 'short',
+          hour: '2-digit',
+          minute: '2-digit'
+        }) + ' UTC'
+      : '';
+
+    return 'NOAA SWPC · ' + type +
+      (level ? ' ' + level : '') +
+      (date ? ' · Emitido: ' + date : '');
+  }
+
+  function show(messages) {
+    track.replaceChildren();
+
+    const text = document.createElement('span');
+    text.className = 'dx-noaa-message';
+    text.textContent = '☀ ' + messages.join('     ✦     ');
+
+    track.append(text);
+
+    requestAnimationFrame(() => {
+      const distance = panel.clientWidth + text.scrollWidth;
+      const duration = Math.max(40, Math.round(distance / 32));
+
+      track.style.setProperty(
+        '--dx-noaa-duration',
+        duration + 's'
+      );
+    });
+  }
+
+  async function update() {
     try {
-      const response = await fetch(url, {
-        cache:'no-store',
-        signal:AbortSignal.timeout(12000)
-      });
+      const response = await fetch(
+        'https://services.swpc.noaa.gov/products/alerts.json',
+        {
+          cache: 'no-store',
+          signal: AbortSignal.timeout(12000)
+        }
+      );
 
-      if(!response.ok) throw Error('HTTP '+response.status);
+      if (!response.ok) throw Error('NOAA ' + response.status);
 
       const data = await response.json();
-      if(!Array.isArray(data)) throw Error('Formato NOAA');
 
-      const cutoff = Date.now()-24*3600000;
+      if (!Array.isArray(data)) {
+        throw Error('Formato NOAA inesperado');
+      }
 
-      const recent = data.filter(item=>{
+      const cutoff = Date.now() - 24 * 3600000;
+
+      const recent = data.filter(item => {
         const date = Date.parse(
           item.issue_datetime ||
           item.issue_time ||
           item.time_tag ||
           ''
         );
-        return Number.isFinite(date) && date >= cutoff;
+
+        return Number.isFinite(date) &&
+          date >= cutoff &&
+          /geomagnetic|solar radiation|radio blackout|storm|flare/i
+            .test(item.message || '');
       });
 
-      const important = recent.filter(item =>
-        /geomagnetic|solar radiation|radio blackout|storm|flare/i
-        .test(item.message || '')
-      );
+      const messages = [
+        ...new Set(recent.slice(0, 4).map(summarize))
+      ];
 
-      if(!important.length){
-        panel.textContent =
-          'NOAA SWPC · Sin alertas recientes de tormentas espaciales';
-        return;
-      }
+      show(messages.length
+        ? messages
+        : ['Sin avisos recientes de tormentas espaciales']);
 
-      const item = important[0];
-      const message = String(item.message || '')
-        .replace(/\s+/g,' ')
-        .trim();
-
-      panel.textContent =
-        'NOAA SWPC · ' + message.slice(0,180);
-
-      panel.title = message;
-    } catch(error){
-      panel.textContent =
-        'NOAA SWPC · Alertas externas no disponibles';
-      console.warn('NOAA alerts',error);
+    } catch (error) {
+      show(['Alertas NOAA temporalmente no disponibles']);
+      console.warn('NOAA SWPC:', error);
     }
   }
 
-  updateAlerts();
-  setInterval(updateAlerts,15*60*1000);
+  update();
+  setInterval(update, 15 * 60 * 1000);
 })();
 </script>
+
 </body></html>
