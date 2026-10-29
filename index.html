@@ -881,4 +881,48 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
 })();
 </script>
 
+
+<script>
+/* DX CLOCK — FREQUENCY LEGIBILITY */
+(function(){
+  function highlight(){
+    const containers = [
+      document.getElementById('spotList'),
+      document.getElementById('expList')
+    ].filter(Boolean);
+
+    for(const container of containers){
+      const nodes = container.querySelectorAll(
+        'span, small, strong, b, div'
+      );
+
+      for(const node of nodes){
+        if(node.children.length) continue;
+
+        const value=(node.textContent||'').trim();
+
+        if(/\b\d{1,3}\.\d{3}\s*MHz\b/i.test(value)){
+          node.classList.add('dx-frequency-highlight');
+        }
+      }
+    }
+  }
+
+  highlight();
+
+  const observer=new MutationObserver(highlight);
+
+  for(const id of ['spotList','expList']){
+    const element=document.getElementById(id);
+
+    if(element){
+      observer.observe(element,{
+        childList:true,
+        subtree:true
+      });
+    }
+  }
+})();
+</script>
+
 </body></html>

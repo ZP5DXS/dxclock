@@ -934,3 +934,44 @@
 .solarPanel .dx-noaa-copy {
   line-height:26px !important;
 }
+
+
+/* DX CLOCK — FINAL READABILITY */
+
+.solarPanel #solarCondition {
+  display:none !important;
+}
+
+.solarPanel .dx-solar-condition {
+  min-height:0 !important;
+  height:70px !important;
+  padding:8px !important;
+  gap:4px !important;
+}
+
+.solarPanel .dx-solar-condition > span {
+  font-size:10px !important;
+  line-height:1.2 !important;
+  margin:0 !important;
+}
+
+.solarPanel .dx-solar-condition > b {
+  font-size:35px !important;
+  line-height:1.1 !important;
+  margin:0 !important;
+}
+
+.solarPanel .dx-solar-three {
+  gap:7px !important;
+}
+
+.solarPanel .dx-solar-cell {
+  height:62px !important;
+  padding:5px 3px !important;
+}
+
+.dx-frequency-highlight {
+  color:#dbe8ef !important;
+  font-weight:650 !important;
+  opacity:1 !important;
+}
