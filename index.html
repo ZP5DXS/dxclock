@@ -688,6 +688,64 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
 
   const url = 'https://services.swpc.noaa.gov/products/alerts.json';
 
+
+  const noaaTranslations = {
+    es: {
+      generic: 'Aviso de actividad solar',
+      geomagnetic: 'Tormenta geomagnética',
+      blackout: 'Posible interrupción de radio HF',
+      radiation: 'Tormenta de radiación solar',
+      flare: 'Erupción solar',
+      issued: 'Emitido',
+      empty: 'Sin avisos recientes de tormentas espaciales',
+      unavailable: 'Alertas NOAA temporalmente no disponibles',
+      locale: 'es-ES'
+    },
+    en: {
+      generic: 'Solar activity advisory',
+      geomagnetic: 'Geomagnetic storm',
+      blackout: 'Possible HF radio blackout',
+      radiation: 'Solar radiation storm',
+      flare: 'Solar flare',
+      issued: 'Issued',
+      empty: 'No recent space weather alerts',
+      unavailable: 'NOAA alerts temporarily unavailable',
+      locale: 'en-US'
+    },
+    pt: {
+      generic: 'Aviso de atividade solar',
+      geomagnetic: 'Tempestade geomagnética',
+      blackout: 'Possível interrupção de rádio HF',
+      radiation: 'Tempestade de radiação solar',
+      flare: 'Erupção solar',
+      issued: 'Emitido',
+      empty: 'Sem alertas recentes de clima espacial',
+      unavailable: 'Alertas NOAA temporariamente indisponíveis',
+      locale: 'pt-BR'
+    }
+  };
+
+  function noaaLang() {
+    const selected = document.getElementById('lang')?.value;
+    return noaaTranslations[selected] ? selected : 'es';
+  }
+
+  let lastNoaaItems = null;
+  let lastNoaaError = false;
+
+  function renderNoaaLanguage() {
+    const t = noaaTranslations[noaaLang()];
+
+    if (lastNoaaError) {
+      show([t.unavailable]);
+    } else if (lastNoaaItems !== null) {
+      const messages = [
+        ...new Set(lastNoaaItems.slice(0, 4).map(summarize))
+      ];
+      show(messages.length ? messages : [t.empty]);
+    }
+  }
+
   function summarize(item) {
     const raw = String(item.message || '');
     const normalized = raw.replace(/\s+/g, ' ');
@@ -695,16 +753,17 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
     const code = normalized.match(/\b(?:G[1-5]|R[1-5]|S[1-5])\b/i);
     const level = code ? code[0].toUpperCase() : '';
 
-    let type = 'Aviso de actividad solar';
+    const t = noaaTranslations[noaaLang()];
+    let type = t.generic;
 
     if (/geomagnetic/i.test(raw)) {
-      type = 'Tormenta geomagnética';
+      type = t.geomagnetic;
     } else if (/radio blackout/i.test(raw)) {
-      type = 'Posible interrupción de radio HF';
+      type = t.blackout;
     } else if (/solar radiation/i.test(raw)) {
-      type = 'Tormenta de radiación solar';
+      type = t.radiation;
     } else if (/solar flare/i.test(raw)) {
-      type = 'Erupción solar';
+      type = t.flare;
     }
 
     const issued = Date.parse(
@@ -712,7 +771,7 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
     );
 
     const date = Number.isFinite(issued)
-      ? new Date(issued).toLocaleString('es-ES', {
+      ? new Date(issued).toLocaleString(t.locale, {
           timeZone: 'UTC',
           day: '2-digit',
           month: 'short',
@@ -723,7 +782,7 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
 
     return 'NOAA SWPC · ' + type +
       (level ? ' ' + level : '') +
-      (date ? ' · Emitido: ' + date : '');
+      (date ? ' · ' + t.issued + ': ' + date : '');
   }
 
 
@@ -790,19 +849,24 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
             .test(item.message || '');
       });
 
+      lastNoaaItems = recent;
+      lastNoaaError = false;
       const messages = [
         ...new Set(recent.slice(0, 4).map(summarize))
       ];
 
       show(messages.length
         ? messages
-        : ['Sin avisos recientes de tormentas espaciales']);
+        : [noaaTranslations[noaaLang()].empty]);
 
     } catch (error) {
-      show(['Alertas NOAA temporalmente no disponibles']);
+      lastNoaaError = true;
+      show([noaaTranslations[noaaLang()].unavailable]);
       console.warn('NOAA SWPC:', error);
     }
   }
+
+  document.getElementById('lang')?.addEventListener('change', renderNoaaLanguage);
 
   update();
   setInterval(update, 15 * 60 * 1000);
