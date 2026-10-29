@@ -381,6 +381,19 @@ function drawDXMarkers(){const ns='http://www.w3.org/2000/svg',host=$('dxMarkers
  const mt=document.createElementNS(ns,'text');mt.setAttribute('x',bx+6);mt.setAttribute('y',by+25);mt.setAttribute('class','dx-callout-meta');mt.textContent=meta;
  g.append(line,circle,rect,title,mt);host.append(g)}
 }
+const bandColors={
+ '160m':'#a78bfa',
+ '80m':'#818cf8',
+ '60m':'#38bdf8',
+ '40m':'#22d3ee',
+ '30m':'#34d399',
+ '20m':'#4ade80',
+ '17m':'#facc15',
+ '15m':'#fb923c',
+ '12m':'#f472b6',
+ '10m':'#f87171',
+ '6m':'#e879f9'
+};
 function markerSvg(s,x,y,n){const ns='http://www.w3.org/2000/svg',g=document.createElementNS(ns,'g');const size=Math.min(4.2,1.7+Math.log2(n+1)*.65),color=bandColors[bandOf(freq(s))]||'#b8c1cb';let sh;
  if(s.mode==='CW'){sh=document.createElementNS(ns,'polygon');sh.setAttribute('points',`${x},${y-size} ${x-size},${y+size*.8} ${x+size},${y+size*.8}`)}
  else if(s.mode==='SSB'){sh=document.createElementNS(ns,'rect');sh.setAttribute('x',x-size*.8);sh.setAttribute('y',y-size*.8);sh.setAttribute('width',size*1.6);sh.setAttribute('height',size*1.6);sh.setAttribute('rx',1)}
