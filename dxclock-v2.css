@@ -279,3 +279,17 @@
  .solarPanel .solar-condition{display:none!important}
 }
 @media(max-width:899px){.solarPanel .solar-values{grid-template-columns:repeat(4,minmax(0,1fr))!important}.solarPanel .solar-condition{display:none!important}}
+
+/* DX CLOCK V2 FINAL: compact stylized solar display */
+.solarPanel .solar-wrap{position:relative!important;display:flex!important;justify-content:center!important;align-items:center!important;min-height:0!important;height:calc(100% - 22px)!important;overflow:hidden!important;padding:0!important}
+.solarPanel .solar-sim{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;width:clamp(92px,11vw,158px)!important;height:clamp(92px,11vw,158px)!important;max-height:85%!important;aspect-ratio:1!important;border-radius:50%!important;background:radial-gradient(circle at 32% 28%,#fff3a1 0%,#fcd36b 13%,#e99a2c 34%,#bb511a 65%,#7d250c 100%)!important;box-shadow:0 0 18px #f9a32d55,0 0 38px #e7761a22!important;animation:none!important;z-index:0!important}
+.solarPanel .solar-sim::before{inset:12%!important;border:0!important;opacity:.35!important;background:radial-gradient(ellipse at 75% 65%,#6a250b 0 9%,transparent 12%),radial-gradient(ellipse at 25% 35%,#7a320e 0 7%,transparent 12%);animation:none!important}
+.solarPanel .solar-sim::after{display:none!important}
+.solarPanel .solar-values{position:relative!important;z-index:1!important;display:grid!important;grid-template-columns:1fr 1fr!important;grid-template-rows:1fr 1fr!important;align-items:stretch!important;justify-items:stretch!important;width:100%!important;height:100%!important;min-height:150px!important;gap:5px!important;pointer-events:none!important}
+.solarPanel .solar-value{width:fit-content!important;min-width:65px!important;max-width:95px!important;padding:5px 7px!important;background:rgba(5,17,24,.86)!important;align-self:start!important;justify-self:start!important;pointer-events:auto!important}
+.solarPanel .solar-value:nth-child(2){justify-self:end!important}
+.solarPanel .solar-value:nth-child(3){align-self:end!important}
+.solarPanel .solar-value:nth-child(4){align-self:end!important;justify-self:end!important}
+.solarPanel .solar-condition{display:none!important}
+.dx-layer-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:10px;color:var(--dim);margin:5px 0}.dx-layer-controls label{white-space:nowrap;cursor:pointer}.dx-layer-controls input{accent-color:#46d4c8}
+.spotmeta.multi-mode{display:flex;flex-wrap:wrap;gap:4px 9px;align-items:center}.mode-item{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;font-size:10px}
