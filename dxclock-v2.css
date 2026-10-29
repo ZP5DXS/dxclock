@@ -806,3 +806,131 @@
     animation:none !important;
   }
 }
+
+
+/* DX CLOCK — FINAL VISUAL FIT */
+
+.solarPanel {
+  display:flex !important;
+  flex-direction:column !important;
+  overflow:hidden !important;
+  min-height:0 !important;
+}
+
+.solarPanel .solar-wrap.solar-compact {
+  display:flex !important;
+  flex:1 1 auto !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  min-height:0 !important;
+  height:auto !important;
+  padding:6px 11px !important;
+  overflow:hidden !important;
+}
+
+.solarPanel #solarSummary.dx-solar-new {
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  gap:7px !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+.solarPanel .dx-solar-condition {
+  display:flex !important;
+  flex:0 0 auto !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:3px !important;
+  min-height:0 !important;
+  height:80px !important;
+  padding:8px 6px !important;
+  margin:0 !important;
+  overflow:hidden !important;
+}
+
+.solarPanel .dx-solar-condition > span {
+  position:static !important;
+  display:block !important;
+  font-size:10px !important;
+  line-height:1.2 !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+}
+
+.solarPanel .dx-solar-condition > b {
+  position:static !important;
+  display:block !important;
+  font-size:33px !important;
+  line-height:1.05 !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+}
+
+.solarPanel .dx-solar-condition > small {
+  position:static !important;
+  display:block !important;
+  font-size:10px !important;
+  line-height:1.2 !important;
+  margin:0 !important;
+  padding:0 !important;
+  transform:none !important;
+}
+
+.solarPanel .dx-solar-three {
+  display:grid !important;
+  flex:0 0 auto !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:7px !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
+}
+
+.solarPanel .dx-solar-cell {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:3px !important;
+  height:65px !important;
+  min-height:0 !important;
+  padding:5px 3px !important;
+  margin:0 !important;
+  overflow:hidden !important;
+}
+
+.solarPanel .dx-solar-cell span {
+  font-size:10px !important;
+  line-height:1.2 !important;
+}
+
+.solarPanel .dx-solar-cell b {
+  font-size:26px !important;
+  line-height:1.05 !important;
+}
+
+.solarPanel #solarAlerts.dx-noaa-ticker {
+  flex:0 0 26px !important;
+  height:26px !important;
+  min-height:26px !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+}
+
+.solarPanel .dx-noaa-track,
+.solarPanel .dx-noaa-group {
+  height:26px !important;
+}
+
+.solarPanel .dx-noaa-copy {
+  line-height:26px !important;
+}

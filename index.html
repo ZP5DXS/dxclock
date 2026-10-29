@@ -253,7 +253,7 @@ html[data-pixel="on"] .geo-grid{opacity:.22;stroke:var(--accent)}html[data-pixel
   <div class="dx-solar-three">
 
    <div class="dx-solar-cell">
-    <span>SFI · F10.7</span>
+    <span>SFI</span>
     <b id="solarSfi">—</b>
    </div>
 
@@ -794,6 +794,90 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
 
   update();
   setInterval(update, 15 * 60 * 1000);
+})();
+</script>
+
+
+<script>
+/* DX CLOCK — SOURCE STATUS COUNTER */
+(function(){
+  const names = [
+    'EA4RCH',
+    'RBN',
+    'HamQTH',
+    'NG3K',
+    'ClubLog',
+    'Solar',
+    'Audiencia'
+  ];
+
+  function updateSourceCounter(){
+    const all = [...document.querySelectorAll('*')];
+
+    const status = all.find(el =>
+      el.children.length === 0 &&
+      /^\s*\d+\s*\/\s*\d+\s*FUENTES\s*$/i
+        .test(el.textContent || '')
+    );
+
+    if(!status) return;
+
+    const settings = document.getElementById('settings');
+    if(!settings) return;
+
+    const rows = [...settings.querySelectorAll('*')]
+      .filter(el =>
+        el.children.length === 0 &&
+        names.includes((el.textContent || '').trim())
+      );
+
+    const unique = [...new Set(
+      rows.map(el => el.textContent.trim())
+    )];
+
+    if(unique.length !== names.length) return;
+
+    let healthy = 0;
+
+    for(const name of names){
+      const label = rows.find(el =>
+        el.textContent.trim() === name
+      );
+
+      const row = label?.parentElement;
+      if(!row) continue;
+
+      const dot = row.querySelector(
+        '.ok, .online, .healthy, .green, ' +
+        '[data-status="ok"], [data-status="online"]'
+      );
+
+      const style = getComputedStyle(
+        row.querySelector('i, .dot, .led') || row
+      );
+
+      const color = style.backgroundColor;
+
+      if(
+        dot ||
+        color === 'rgb(34, 197, 94)' ||
+        color === 'rgb(74, 222, 128)' ||
+        color === 'rgb(0, 255, 136)'
+      ){
+        healthy++;
+      }
+    }
+
+    // Si no podemos identificar con seguridad
+    // los estados, no afirmamos que estén OK.
+    if(healthy > 0){
+      status.textContent =
+        healthy + '/' + names.length + ' FUENTES';
+    }
+  }
+
+  setInterval(updateSourceCounter, 5000);
+  setTimeout(updateSourceCounter, 1500);
 })();
 </script>
 
