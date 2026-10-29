@@ -383,11 +383,12 @@ function drawMap(){
  // Actividad real recibida: conservar filtros de banda y modo.
  const mapSpots=spots.filter(s=>
    (mode==='ALL'||s.mode===mode)&&
-   (band==='ALL'||bandOf(freq(s))===band)&&
-   Number.isFinite(freq(s))&&freq(s)>0
+   (band==='ALL'||bandOf(freq(s))===band)
  );
 
- for(const s of mapSpots){let pos=mapPos(s);if(!pos)continue;let key=Math.round(pos[0]/1.5)+'/'+Math.round(pos[1]/1.5)+'/'+s.mode+'/'+(bandOf(freq(s))||'?');let b=bins.get(key);if(!b)bins.set(key,b={pos,count:0,s});b.count++}for(const b of bins.values())layer.append(markerSvg(b.s,b.pos[0],b.pos[1],b.count));drawDXMarkers();$('mapInfo').replaceChildren(textEl('span',`${bins.size} zonas · ${mapSpots.length} spots · `));const legend=textEl('span','● FT8  ▲ CW  ■ SSB');legend.style.fontWeight='650';$('mapInfo').append(legend)}
+ let mappedCount=0;
+ for(const s of mapSpots){let pos=mapPos(s);if(!pos)continue;
+ mappedCount++;let key=Math.round(pos[0]/1.5)+'/'+Math.round(pos[1]/1.5)+'/'+s.mode+'/'+(bandOf(freq(s))||'?');let b=bins.get(key);if(!b)bins.set(key,b={pos,count:0,s});b.count++}for(const b of bins.values())layer.append(markerSvg(b.s,b.pos[0],b.pos[1],b.count));drawDXMarkers();$('mapInfo').replaceChildren(textEl('span',`${bins.size} zonas · ${mappedCount}/${mapSpots.length} spots · `));const legend=textEl('span','● FT8  ▲ CW  ■ SSB');legend.style.fontWeight='650';$('mapInfo').append(legend)}
 let mapZoom=1,mapCenter=[450,225],mapDrag=null;
 function applyMapZoom(){const w=900/mapZoom,h=450/mapZoom;let x=Math.max(0,Math.min(900-w,mapCenter[0]-w/2)),y=Math.max(0,Math.min(450-h,mapCenter[1]-h/2));mapCenter=[x+w/2,y+h/2];$('world').setAttribute('viewBox',`${x} ${y} ${w} ${h}`)}
 function zoomMap(factor,point){if(point)mapCenter=point;mapZoom=Math.max(1,Math.min(12,mapZoom*factor));applyMapZoom()}
