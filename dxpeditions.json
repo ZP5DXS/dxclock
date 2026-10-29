@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-29T13:16:49.052821+00:00",
+  "updated_utc": "2026-10-29T22:50:30.071540+00:00",
   "entries": [
     {
       "call": "3A",
@@ -82,8 +82,8 @@
     {
       "call": "5Z4GO/P",
       "entity": "Kenya",
-      "start": "2026-10-28",
-      "end": "2026-10-30",
+      "start": "2026-11-01",
+      "end": "2026-11-03",
       "modes": "CW"
     },
     {
@@ -106,13 +106,6 @@
       "start": "2026-10-26",
       "end": "2026-11-25",
       "modes": "CW / SSB"
-    },
-    {
-      "call": "7P8GE",
-      "entity": "Lesotho",
-      "start": "2026-10-16",
-      "end": "2026-10-29",
-      "modes": "No especificado"
     },
     {
       "call": "8P",
@@ -456,6 +449,13 @@
       "start": "2026-11-03",
       "end": "2026-11-16",
       "modes": "No especificado"
+    },
+    {
+      "call": "VP2V",
+      "entity": "Br Virgin Is",
+      "start": "2026-10-27",
+      "end": "2026-11-29",
+      "modes": "FT8"
     },
     {
       "call": "VP2V",
