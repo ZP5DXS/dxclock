@@ -714,22 +714,32 @@ for(let n=-720;n<=840;n+=30){let o=document.createElement('option');o.value=Stri
       (date ? ' · Emitido: ' + date : '');
   }
 
+
   function show(messages) {
     track.replaceChildren();
 
-    const text = document.createElement('span');
-    text.className = 'dx-noaa-message';
-    text.textContent = '☀ ' + messages.join('     ✦     ');
+    const text = messages.join('     ✦     ');
 
-    track.append(text);
+    const group = document.createElement('div');
+    group.className = 'dx-noaa-group';
+
+    for (let i = 0; i < 2; i++) {
+      const span = document.createElement('span');
+      span.className = 'dx-noaa-copy';
+      span.textContent = 'NOAA SWPC · ' + text + '     ✦     ';
+      group.append(span);
+    }
+
+    track.append(group);
 
     requestAnimationFrame(() => {
-      const distance = panel.clientWidth + text.scrollWidth;
-      const duration = Math.max(40, Math.round(distance / 32));
+      const first = group.firstElementChild;
+      const distance = first.getBoundingClientRect().width;
+      const seconds = Math.max(35, distance / 28);
 
       track.style.setProperty(
         '--dx-noaa-duration',
-        duration + 's'
+        seconds + 's'
       );
     });
   }

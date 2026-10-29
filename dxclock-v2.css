@@ -714,3 +714,95 @@
     padding-left: 8px !important;
   }
 }
+
+
+/* DX CLOCK — FINAL SOLAR POLISH */
+
+.solarPanel .dx-solar-condition {
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:5px !important;
+  padding:14px 8px !important;
+  min-height:92px !important;
+}
+
+.solarPanel .dx-solar-condition > span,
+.solarPanel .dx-solar-condition > b,
+.solarPanel .dx-solar-condition > small {
+  position:static !important;
+  display:block !important;
+  transform:none !important;
+  margin:0 !important;
+  padding:0 !important;
+  width:auto !important;
+  height:auto !important;
+  line-height:1.2 !important;
+  text-align:center !important;
+}
+
+.solarPanel .dx-solar-condition > span {
+  font-size:10px !important;
+  letter-spacing:.13em !important;
+}
+
+.solarPanel .dx-solar-condition > b {
+  font-size:36px !important;
+  line-height:1.05 !important;
+}
+
+.solarPanel .dx-solar-condition > small {
+  font-size:10px !important;
+  white-space:normal !important;
+}
+
+.solarPanel #solarAlerts.dx-noaa-ticker {
+  height:29px !important;
+  min-height:29px !important;
+  overflow:hidden !important;
+}
+
+.solarPanel .dx-noaa-track {
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  display:block !important;
+  width:max-content !important;
+  height:29px !important;
+  animation:dxNoaaContinuous var(--dx-noaa-duration,55s)
+    linear infinite !important;
+}
+
+.solarPanel .dx-noaa-group {
+  display:flex !important;
+  width:max-content !important;
+  height:29px !important;
+  align-items:center !important;
+}
+
+.solarPanel .dx-noaa-copy {
+  display:inline-block !important;
+  flex:0 0 auto !important;
+  padding:0 38px 0 0 !important;
+  margin:0 !important;
+  font-size:11px !important;
+  line-height:29px !important;
+  white-space:nowrap !important;
+  color:var(--dim) !important;
+}
+
+.solarPanel .dx-noaa-ticker:hover .dx-noaa-track {
+  animation-play-state:paused !important;
+}
+
+@keyframes dxNoaaContinuous {
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .solarPanel .dx-noaa-track {
+    animation:none !important;
+  }
+}
