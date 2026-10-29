@@ -1066,3 +1066,44 @@
 .band .heat-label {
   display:none !important;
 }
+
+
+/* DX CLOCK — MAP LAYER SETTINGS ALIGNMENT */
+#settingsForm .dx-layer-controls {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  gap:11px !important;
+  margin-top:16px !important;
+}
+
+#settingsForm .dx-layer-controls h4 {
+  text-align:left !important;
+  margin:0 0 5px !important;
+  padding:0 !important;
+}
+
+#settingsForm .dx-layer-row {
+  display:flex !important;
+  flex-direction:row !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+  gap:11px !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  text-align:left !important;
+}
+
+#settingsForm .dx-layer-row input[type="checkbox"] {
+  flex:0 0 17px !important;
+  width:17px !important;
+  height:17px !important;
+  margin:0 !important;
+}
+
+#settingsForm .dx-layer-row span {
+  flex:1 1 auto !important;
+  text-align:left !important;
+  white-space:normal !important;
+}
