@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-29T22:50:30.071540+00:00",
+  "updated_utc": "2026-10-30T05:58:47.067290+00:00",
   "entries": [
     {
       "call": "3A",
@@ -64,13 +64,6 @@
       "start": "2026-10-19",
       "end": "2026-11-19",
       "modes": "CW"
-    },
-    {
-      "call": "5W0ZP",
-      "entity": "Samoa",
-      "start": "2026-10-21",
-      "end": "2026-10-29",
-      "modes": "CW / FT8 / FT4"
     },
     {
       "call": "5X7W",
