@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-30T13:08:28.191373+00:00",
+  "updated_utc": "2026-10-30T22:27:56.918195+00:00",
   "entries": [
     {
       "call": "3A",
@@ -64,6 +64,13 @@
       "start": "2026-10-19",
       "end": "2026-11-19",
       "modes": "CW"
+    },
+    {
+      "call": "5R8IC",
+      "entity": "Madagascar",
+      "start": "2026-10-25",
+      "end": "2026-12-20",
+      "modes": "CW / SSB / FT8"
     },
     {
       "call": "5X7W",
@@ -428,13 +435,6 @@
       "start": "2026-11-16",
       "end": "2026-12-04",
       "modes": "CW"
-    },
-    {
-      "call": "VP0SG",
-      "entity": "South Georgia I",
-      "start": "2027-03-12",
-      "end": "2027-03-26",
-      "modes": "CW / SSB"
     },
     {
       "call": "VP2MCV",
