@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-30T22:27:56.918195+00:00",
+  "updated_utc": "2026-10-31T05:54:45.478961+00:00",
   "entries": [
     {
       "call": "3A",
@@ -498,13 +498,6 @@
       "start": "2027-11-13",
       "end": "2027-11-23",
       "modes": "CW / SSB / FT8 / FT4 / RTTY"
-    },
-    {
-      "call": "YJ0CA",
-      "entity": "Vanuatu",
-      "start": "2026-10-18",
-      "end": "2026-10-30",
-      "modes": "SSB"
     },
     {
       "call": "YJ0SP",
