@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-10-31T12:45:06.018522+00:00",
+  "updated_utc": "2026-10-31T21:42:30.524723+00:00",
   "entries": [
     {
       "call": "3A",
@@ -148,6 +148,13 @@
       "start": "2026-11-28",
       "end": "2026-12-04",
       "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "C21GD",
+      "entity": "Nauru",
+      "start": "2026-12-10",
+      "end": "2026-12-16",
+      "modes": "CW / SSB"
     },
     {
       "call": "C5A",
