@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-02T06:22:47.964997+00:00",
+  "updated_utc": "2026-11-02T21:47:03.423767+00:00",
   "entries": [
     {
       "call": "3A",
@@ -40,8 +40,8 @@
     {
       "call": "3X4U",
       "entity": "Guinea",
-      "start": "2026-11-10",
-      "end": "2026-11-24",
+      "start": "2026-11-11",
+      "end": "2026-11-23",
       "modes": "CW / SSB / FT8 / RTTY"
     },
     {
@@ -147,7 +147,7 @@
       "entity": "Nauru",
       "start": "2026-12-10",
       "end": "2026-12-16",
-      "modes": "CW / SSB"
+      "modes": "CW / SSB / FT8 / FT4"
     },
     {
       "call": "C5H",
@@ -449,6 +449,13 @@
       "start": "2027-05-27",
       "end": "2027-06-12",
       "modes": "CW / SSB / FT8 / FT4"
+    },
+    {
+      "call": "VP8THW",
+      "entity": "Falkland Is",
+      "start": "2026-12-12",
+      "end": "2027-01-02",
+      "modes": "SSB / FT8"
     },
     {
       "call": "VP8TOG",
