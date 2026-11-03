@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-02T21:47:03.423767+00:00",
+  "updated_utc": "2026-11-03T06:57:41.515252+00:00",
   "entries": [
     {
       "call": "3A",
@@ -28,13 +28,6 @@
       "entity": "Rodrigues I",
       "start": "2026-11-22",
       "end": "2026-12-02",
-      "modes": "CW / SSB"
-    },
-    {
-      "call": "3DA0GY",
-      "entity": "eSwatini",
-      "start": "2026-10-15",
-      "end": "2026-11-02",
       "modes": "CW / SSB"
     },
     {
@@ -288,13 +281,6 @@
       "start": "2026-10-25",
       "end": "2026-11-04",
       "modes": "FT8"
-    },
-    {
-      "call": "JD1BQP",
-      "entity": "Ogasawara",
-      "start": "2026-10-17",
-      "end": "2026-11-02",
-      "modes": "No especificado"
     },
     {
       "call": "KH0",
