@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-04T19:51:53.614477+00:00",
+  "updated_utc": "2026-11-05T06:58:32.770436+00:00",
   "entries": [
     {
       "call": "3A",
@@ -143,13 +143,6 @@
       "modes": "SSB / FT8 / FT4"
     },
     {
-      "call": "C5R",
-      "entity": "Gambia",
-      "start": "2026-10-01",
-      "end": "2026-11-04",
-      "modes": "SSB"
-    },
-    {
       "call": "C8K",
       "entity": "Mozambique",
       "start": "2026-11-09",
@@ -267,13 +260,6 @@
       "start": "2027-03-09",
       "end": "2027-03-15",
       "modes": "SSB"
-    },
-    {
-      "call": "JD1",
-      "entity": "Ogasawara",
-      "start": "2026-10-25",
-      "end": "2026-11-04",
-      "modes": "FT8"
     },
     {
       "call": "KH0",
