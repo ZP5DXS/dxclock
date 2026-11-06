@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-06T06:58:01.483591+00:00",
+  "updated_utc": "2026-11-06T19:30:04.299739+00:00",
   "entries": [
     {
       "call": "3A",
@@ -70,7 +70,7 @@
       "entity": "Uganda",
       "start": "2026-11-08",
       "end": "2026-12-29",
-      "modes": "CW / FT8"
+      "modes": "CW / FT8 / FT4"
     },
     {
       "call": "6O6X",
@@ -439,8 +439,8 @@
     {
       "call": "XR0Z",
       "entity": "Juan Fernandez Is",
-      "start": "2026-11-01",
-      "end": "2026-11-30",
+      "start": "2026-11-25",
+      "end": "2026-12-06",
       "modes": "CW / SSB / FT8"
     },
     {
