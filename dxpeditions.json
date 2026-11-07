@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-07T06:10:26.578249+00:00",
+  "updated_utc": "2026-11-07T13:15:40.491069+00:00",
   "entries": [
     {
       "call": "3A",
@@ -367,6 +367,13 @@
       "modes": "CW"
     },
     {
+      "call": "VP0SG",
+      "entity": "South Georgia I",
+      "start": "2027-03-12",
+      "end": "2027-03-26",
+      "modes": "CW / SSB"
+    },
+    {
       "call": "VP2MCV",
       "entity": "Montserrat",
       "start": "2026-11-03",
@@ -407,13 +414,6 @@
       "start": "2027-01-10",
       "end": "2027-10-17",
       "modes": "SSB / FT8"
-    },
-    {
-      "call": "VP8TTX",
-      "entity": "Falkland Is",
-      "start": "2027-04-01",
-      "end": "2027-04-15",
-      "modes": "CW / SSB"
     },
     {
       "call": "XR0Z",
