@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-07T13:15:40.491069+00:00",
+  "updated_utc": "2026-11-07T21:58:13.953818+00:00",
   "entries": [
     {
       "call": "3A",
@@ -145,7 +145,7 @@
     {
       "call": "C8K",
       "entity": "Mozambique",
-      "start": "2026-11-09",
+      "start": "2026-11-10",
       "end": "2026-11-20",
       "modes": "CW / SSB / FT8 / FT4 / RTTY"
     },
@@ -330,6 +330,13 @@
       "start": "2027-02-03",
       "end": "2027-03-03",
       "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "V6AIU",
+      "entity": "Micronesia",
+      "start": "2026-11-26",
+      "end": "2026-12-01",
+      "modes": "No especificado"
     },
     {
       "call": "V6XG",
