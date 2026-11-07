@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-06T19:30:04.299739+00:00",
+  "updated_utc": "2026-11-07T06:10:26.578249+00:00",
   "entries": [
     {
       "call": "3A",
@@ -34,7 +34,7 @@
       "call": "3X4U",
       "entity": "Guinea",
       "start": "2026-11-11",
-      "end": "2026-11-23",
+      "end": "2026-11-24",
       "modes": "CW / SSB / FT8 / RTTY"
     },
     {
@@ -248,13 +248,6 @@
       "modes": "No especificado"
     },
     {
-      "call": "J3",
-      "entity": "Grenada",
-      "start": "2026-10-31",
-      "end": "2026-11-06",
-      "modes": "CW / SSB / FT8"
-    },
-    {
       "call": "J6",
       "entity": "St Lucia",
       "start": "2027-03-09",
@@ -332,25 +325,11 @@
       "modes": "CW / SSB"
     },
     {
-      "call": "V26JJ",
-      "entity": "Antigua",
-      "start": "2026-10-30",
-      "end": "2026-11-06",
-      "modes": "CW / SSB / FT8"
-    },
-    {
       "call": "V4",
       "entity": "St Kitts & Nevis",
       "start": "2027-02-03",
       "end": "2027-03-03",
       "modes": "CW / SSB / FT8"
-    },
-    {
-      "call": "V47JA",
-      "entity": "St Kitts & Nevis",
-      "start": "2026-10-28",
-      "end": "2026-11-06",
-      "modes": "SSB / FT8"
     },
     {
       "call": "V6XG",
