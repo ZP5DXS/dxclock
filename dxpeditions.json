@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-09T06:49:05.881492+00:00",
+  "updated_utc": "2026-11-09T22:29:15.151843+00:00",
   "entries": [
     {
       "call": "3A",
@@ -141,13 +141,6 @@
       "start": "2026-12-27",
       "end": "2027-01-03",
       "modes": "SSB / FT8 / FT4"
-    },
-    {
-      "call": "C8K",
-      "entity": "Mozambique",
-      "start": "2026-11-10",
-      "end": "2026-11-20",
-      "modes": "CW / SSB / FT8 / FT4 / RTTY"
     },
     {
       "call": "D44JB",
