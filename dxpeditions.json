@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-09T22:29:15.151843+00:00",
+  "updated_utc": "2026-11-10T07:27:58.834785+00:00",
   "entries": [
     {
       "call": "3A",
@@ -78,13 +78,6 @@
       "start": "2027-02-15",
       "end": "2027-02-27",
       "modes": "No especificado"
-    },
-    {
-      "call": "6W",
-      "entity": "Senegal",
-      "start": "2026-10-28",
-      "end": "2026-11-09",
-      "modes": "CW / SSB / FT8 / RTTY"
     },
     {
       "call": "7P8EA",
@@ -183,6 +176,13 @@
       "start": "2027-05-17",
       "end": "2027-05-24",
       "modes": "CW / SSB / FT8 / FT4"
+    },
+    {
+      "call": "FP",
+      "entity": "St Pierre & Miquelon",
+      "start": "2027-06-26",
+      "end": "2027-07-13",
+      "modes": "CW / SSB / FT8"
     },
     {
       "call": "FS",
