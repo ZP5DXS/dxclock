@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-10T07:27:58.834785+00:00",
+  "updated_utc": "2026-11-10T19:50:39.558870+00:00",
   "entries": [
     {
       "call": "3A",
@@ -323,6 +323,13 @@
       "start": "2027-02-03",
       "end": "2027-03-03",
       "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "V4",
+      "entity": "St Kitts & Nevis",
+      "start": "2027-05-27",
+      "end": "2027-06-03",
+      "modes": "CW"
     },
     {
       "call": "V6AIU",
