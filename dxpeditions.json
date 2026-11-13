@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-13T06:55:23.763884+00:00",
+  "updated_utc": "2026-11-13T19:50:42.687626+00:00",
   "entries": [
     {
       "call": "3A",
@@ -148,6 +148,13 @@
       "start": "2026-10-21",
       "end": "2026-11-16",
       "modes": "CW"
+    },
+    {
+      "call": "E51RAR",
+      "entity": "South Cook Is",
+      "start": "2027-04-12",
+      "end": "2027-04-22",
+      "modes": "CW / SSB"
     },
     {
       "call": "EG9MM",
@@ -346,11 +353,18 @@
       "modes": "CW / SSB / FT8"
     },
     {
+      "call": "VK9NA",
+      "entity": "Norfolk I",
+      "start": "2026-11-14",
+      "end": "2026-11-19",
+      "modes": "CW / SSB / FT8"
+    },
+    {
       "call": "VK9XY",
       "entity": "Christmas I",
       "start": "2026-11-16",
       "end": "2026-12-04",
-      "modes": "CW"
+      "modes": "CW / SSB / FT8 / FT4"
     },
     {
       "call": "VP0SG",
