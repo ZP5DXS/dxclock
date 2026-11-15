@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-14T22:36:09.043025+00:00",
+  "updated_utc": "2026-11-15T06:45:52.663087+00:00",
   "entries": [
     {
       "call": "3A",
@@ -190,13 +190,6 @@
       "start": "2026-11-30",
       "end": "2026-12-09",
       "modes": "CW"
-    },
-    {
-      "call": "FW3GT",
-      "entity": "Wallis & Futuna",
-      "start": "2026-10-31",
-      "end": "2026-11-14",
-      "modes": "CW / FT8"
     },
     {
       "call": "H44MS",
