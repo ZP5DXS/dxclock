@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-15T18:56:51.775982+00:00",
+  "updated_utc": "2026-11-16T06:44:59.603561+00:00",
   "entries": [
     {
       "call": "3A",
@@ -162,13 +162,6 @@
       "start": "2027-04-12",
       "end": "2027-04-22",
       "modes": "CW / SSB"
-    },
-    {
-      "call": "EG9MM",
-      "entity": "Ceuta & Melilla",
-      "start": "2026-11-13",
-      "end": "2026-11-15",
-      "modes": "SSB"
     },
     {
       "call": "FO",
