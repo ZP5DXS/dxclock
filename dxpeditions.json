@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-16T06:44:59.603561+00:00",
+  "updated_utc": "2026-11-16T22:17:04.505194+00:00",
   "entries": [
     {
       "call": "3A",
@@ -299,6 +299,13 @@
     {
       "call": "V4",
       "entity": "St Kitts & Nevis",
+      "start": "2026-11-14",
+      "end": "2026-11-22",
+      "modes": "CW / SSB / FT8 / RTTY"
+    },
+    {
+      "call": "V4",
+      "entity": "St Kitts & Nevis",
       "start": "2027-02-03",
       "end": "2027-03-03",
       "modes": "CW / SSB / FT8"
@@ -315,7 +322,7 @@
       "entity": "Micronesia",
       "start": "2026-11-26",
       "end": "2026-12-01",
-      "modes": "No especificado"
+      "modes": "CW / FT8 / RTTY"
     },
     {
       "call": "V6XG",
@@ -393,6 +400,13 @@
       "start": "2027-05-27",
       "end": "2027-06-12",
       "modes": "CW / SSB / FT8 / FT4"
+    },
+    {
+      "call": "VP8TAA",
+      "entity": "Falkland Is",
+      "start": "2026-11-26",
+      "end": "2026-12-31",
+      "modes": "CW / SSB / FT8"
     },
     {
       "call": "VP8THW",
