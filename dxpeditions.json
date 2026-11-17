@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-16T22:17:04.505194+00:00",
+  "updated_utc": "2026-11-17T08:04:43.551597+00:00",
   "entries": [
     {
       "call": "3A",
@@ -148,13 +148,6 @@
       "start": "2026-11-14",
       "end": "2026-11-22",
       "modes": "CW / SSB / FT8"
-    },
-    {
-      "call": "E51MWA",
-      "entity": "North Cook Is",
-      "start": "2026-10-21",
-      "end": "2026-11-16",
-      "modes": "CW"
     },
     {
       "call": "E51RAR",
@@ -372,13 +365,6 @@
       "start": "2027-03-12",
       "end": "2027-03-26",
       "modes": "CW / SSB"
-    },
-    {
-      "call": "VP2MCV",
-      "entity": "Montserrat",
-      "start": "2026-11-03",
-      "end": "2026-11-16",
-      "modes": "No especificado"
     },
     {
       "call": "VP2V",
