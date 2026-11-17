@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-17T08:04:43.551597+00:00",
+  "updated_utc": "2026-11-17T21:03:08.888021+00:00",
   "entries": [
     {
       "call": "3A",
@@ -195,13 +195,6 @@
       "call": "HD4W",
       "entity": "Ecuador",
       "start": "2026-11-15",
-      "end": "2026-11-22",
-      "modes": "CW / SSB / FT8"
-    },
-    {
-      "call": "HD4W",
-      "entity": "Ecuador",
-      "start": "2026-11-20",
       "end": "2026-11-22",
       "modes": "CW / SSB / FT8"
     },
