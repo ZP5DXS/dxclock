@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-22T19:49:18.008463+00:00",
+  "updated_utc": "2026-11-23T07:51:14.400834+00:00",
   "entries": [
     {
       "call": "3A",
@@ -129,13 +129,6 @@
       "modes": "SSB / FT8 / FT4"
     },
     {
-      "call": "E51A",
-      "entity": "South Cook Is",
-      "start": "2026-11-14",
-      "end": "2026-11-22",
-      "modes": "CW / SSB / FT8"
-    },
-    {
       "call": "E51RAR",
       "entity": "South Cook Is",
       "start": "2027-04-12",
@@ -169,13 +162,6 @@
       "start": "2027-02-05",
       "end": "2027-05-07",
       "modes": "SSB / FT8"
-    },
-    {
-      "call": "HD4W",
-      "entity": "Ecuador",
-      "start": "2026-11-15",
-      "end": "2026-11-22",
-      "modes": "CW / SSB / FT8"
     },
     {
       "call": "HR5",
@@ -253,13 +239,6 @@
       "start": "2026-10-22",
       "end": "2026-12-02",
       "modes": "CW / SSB"
-    },
-    {
-      "call": "V4",
-      "entity": "St Kitts & Nevis",
-      "start": "2026-11-14",
-      "end": "2026-11-22",
-      "modes": "CW / SSB / FT8 / RTTY"
     },
     {
       "call": "V4",
