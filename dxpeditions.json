@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-23T07:51:14.400834+00:00",
+  "updated_utc": "2026-11-24T00:00:53.997093+00:00",
   "entries": [
     {
       "call": "3A",
@@ -14,13 +14,6 @@
       "entity": "Mauritius",
       "start": "2026-11-20",
       "end": "2026-12-03",
-      "modes": "No especificado"
-    },
-    {
-      "call": "3B8GY",
-      "entity": "Mauritius",
-      "start": "2026-12-03",
-      "end": "2026-12-15",
       "modes": "No especificado"
     },
     {
@@ -358,6 +351,13 @@
       "start": "2027-01-17",
       "end": "2027-01-24",
       "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "XU7O",
+      "entity": "Cambodia",
+      "start": "2026-11-21",
+      "end": "2026-12-31",
+      "modes": "FT8"
     },
     {
       "call": "XU7X",
