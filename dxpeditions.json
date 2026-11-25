@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-24T22:34:28.366807+00:00",
+  "updated_utc": "2026-11-25T08:48:25.652210+00:00",
   "entries": [
     {
       "call": "3A",
@@ -29,13 +29,6 @@
       "start": "2026-11-22",
       "end": "2026-12-02",
       "modes": "CW / SSB"
-    },
-    {
-      "call": "3X4U",
-      "entity": "Guinea",
-      "start": "2026-11-11",
-      "end": "2026-11-24",
-      "modes": "CW / SSB / FT8 / RTTY"
     },
     {
       "call": "3Y0L",
