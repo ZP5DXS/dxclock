@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-25T21:48:26.879015+00:00",
+  "updated_utc": "2026-11-26T08:34:19.709986+00:00",
   "entries": [
     {
       "call": "3A",
@@ -64,13 +64,6 @@
       "start": "2027-02-15",
       "end": "2027-02-27",
       "modes": "No especificado"
-    },
-    {
-      "call": "7P8EA",
-      "entity": "Lesotho",
-      "start": "2026-10-26",
-      "end": "2026-11-25",
-      "modes": "CW / SSB"
     },
     {
       "call": "8P",
