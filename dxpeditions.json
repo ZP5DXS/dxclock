@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-27T08:46:12.115669+00:00",
+  "updated_utc": "2026-11-27T21:26:57.858993+00:00",
   "entries": [
     {
       "call": "3A",
@@ -309,6 +309,13 @@
       "start": "2026-11-26",
       "end": "2026-12-31",
       "modes": "CW / SSB / FT8"
+    },
+    {
+      "call": "VP8TAB",
+      "entity": "Falkland Is",
+      "start": "2026-11-26",
+      "end": "2027-01-06",
+      "modes": "SSB / FT8"
     },
     {
       "call": "VP8THW",
