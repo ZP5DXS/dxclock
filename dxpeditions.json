@@ -1,6 +1,6 @@
 {
   "source": "https://www.ng3k.com/Misc/adxoc.html",
-  "updated_utc": "2026-11-27T21:26:57.858993+00:00",
+  "updated_utc": "2026-11-28T08:00:13.001497+00:00",
   "entries": [
     {
       "call": "3A",
@@ -259,13 +259,6 @@
       "entity": "Christmas I",
       "start": "2026-11-28",
       "end": "2026-12-04",
-      "modes": "CW / SSB / FT8"
-    },
-    {
-      "call": "VK9DS",
-      "entity": "Cocos (Keeling) I",
-      "start": "2026-11-20",
-      "end": "2026-11-27",
       "modes": "CW / SSB / FT8"
     },
     {
